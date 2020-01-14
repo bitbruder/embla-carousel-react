@@ -24,6 +24,10 @@ class EmblaCarouselReact extends Component<PropType> {
     )
     if (this.props.emblaRef) this.props.emblaRef(this.embla)
   }
+  
+  componentWillUnmount() {
+    this.embla.destroy()
+  }
 
   render() {
     return React.createElement(
