@@ -26,7 +26,7 @@ class EmblaCarouselReact extends Component<PropType> {
   }
   
   componentWillUnmount() {
-    this.embla.destroy()
+    if (this.embla) this.embla.destroy()
   }
 
   render() {
